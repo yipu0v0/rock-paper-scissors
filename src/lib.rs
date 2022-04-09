@@ -136,9 +136,6 @@ mod tests {
     use near_sdk::testing_env;
     use near_sdk::json_types::ValidAccountId;
 
-    // part of writing unit tests is setting up a mock context
-    // in this example, this is only needed for env::log in the contract
-    // this is also a useful list to peek at when wondering what's available in env::*
     fn get_context(predecessor_account_id: ValidAccountId) -> VMContextBuilder {
         let mut builder = VMContextBuilder::new();
         builder
