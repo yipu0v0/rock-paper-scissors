@@ -8,7 +8,7 @@ Supposed that alice and bob want to play a game:
 3. Bob do the same.
 4. Now that both alice and bob cannot change his or her choice. Alice can reveal her choice(Shape);
 5. Bob can also reveal his choice(He may choose not to reveal, so some punishment is needed to implemented later).
-6. Now that Alice and Bob both reveal their choices, someone(maybe the winner) can run the get_result method if contract to show the winner!
+6. Now that Alice and Bob both reveal their choices, someone(maybe the winner) can run the get_result method to show the winner!
 
 ## Test
 `cargo test -- --nocapture`
