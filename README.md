@@ -27,4 +27,4 @@ It can be implemented to bet on:
 A time window mechanism is needed to avoid locking bet money permenantly.
 
 ### One game for more players
-Currently the contract only support two-players schema. In reality, rock paper scissors game can be played by more than 2 people with multiple rounds.
+Currently the contract only support two-players schema. In reality, rock paper scissors game can be played by more than two people with multiple rounds.
