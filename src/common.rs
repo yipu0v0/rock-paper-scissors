@@ -1,4 +1,4 @@
-#[derive(Debug)]
+#[derive(Debug, PartialEq)]
 pub enum GameError {
     EnoughPlayers,
     NotEnoughPlayers,
@@ -8,6 +8,7 @@ pub enum GameError {
     PlayersNotMatch,
     RevealNotMatch,
     NotTimeToReveal,
+    NotEnoughReveal,
 }
 
 pub const MAX_PLAYER_COUNT: usize = 2;
