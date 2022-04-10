@@ -24,6 +24,7 @@ It can be implemented to bet on:
 2. NEP-141 token(fungible token standard of Near)
 3. NEP-4 token(NFT standard of Near)
 
+#### Time window
 A time window mechanism is needed to avoid locking bet money permenantly.
 
 ### One game for more players
