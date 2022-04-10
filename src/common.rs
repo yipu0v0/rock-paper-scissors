@@ -1,4 +1,4 @@
-#[derive(Debug, PartialEq)]
+#[derive(Debug, PartialEq, serde::Serialize)]
 pub enum GameError {
     EnoughPlayers,
     NotEnoughPlayers,

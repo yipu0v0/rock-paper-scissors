@@ -1,5 +1,5 @@
 use near_sdk::borsh::{self, BorshDeserialize, BorshSerialize};
-use near_sdk::{near_bindgen, env, AccountId};
+use near_sdk::{near_bindgen, env, AccountId, PanicOnDefault};
 use near_sdk::collections::LookupMap;
 use std::str::FromStr;
 
@@ -37,7 +37,7 @@ impl Game {
 }
 
 #[near_bindgen]
-#[derive(BorshDeserialize, BorshSerialize)]
+#[derive(BorshDeserialize, BorshSerialize, PanicOnDefault)]
 pub struct RockPaperScissors {
     games: LookupMap<u32/* game nunber */, Game>,
     game_count: u32,
@@ -84,11 +84,11 @@ impl RockPaperScissors {
         Ok(())
     }
 
-    pub fn find_player(&self, game_num: &u32, account: &String) -> Option<Player> {
+    fn find_player(&self, game_num: &u32, account: &String) -> Option<Player> {
         self.games.get(game_num)?.players.into_iter().find(|item| item.account.eq(account))
     }
 
-    pub fn find_game(&self, game_num: &u32) -> Option<Game> {
+    fn find_game(&self, game_num: &u32) -> Option<Game> {
         self.games.get(game_num)
     }
 
